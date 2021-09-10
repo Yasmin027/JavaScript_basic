@@ -30,3 +30,24 @@ const sum = function(a,b,c) {
 
 const total = sum(1, 2, 3) + sum(3, 4 ,5);
 console.log(total);
+
+
+// アロー関数
+const sum = (a, b, c) => a + b + c;
+
+const total = sum(1, 2, 3) + sum(3, 4 ,5);
+console.log(total);
+
+
+
+// 引数が一つの場合()を省略できる
+
+const double = function (a) {
+  return a * 2;
+};
+
+        // ↓
+
+const double = a => a * 2;
+console.log(double(12));
+
