@@ -137,3 +137,34 @@ console.log(updatePrice);
 }
 
 //[200, 210, 220]
+
+
+
+filter()
+配列の要素をチェックして、条件にあうものだけを抽出して別の配列として取得する
+
+{
+const numbers = [1, 4, 7, 8, 10]; 
+
+const evenNumbers = numbers.filter(number => {
+  if (number % 2 === 0) {
+    return true;
+  } else {
+    return false;
+  }
+});
+
+console.log(evenNumbers);
+}
+
+                //  ↓簡易化
+
+{
+const numbers = [1, 4, 7, 8, 10]; 
+
+const evenNumbers = numbers.filter(number => number % 2 === 0);
+
+console.log(evenNumbers);
+}
+
+//[4, 8, 10]
