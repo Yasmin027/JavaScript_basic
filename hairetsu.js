@@ -119,3 +119,21 @@ scores.forEach((score,index) => {            //←個々のscoreの要素が順�
 // Score 0: 90
 // Score 0: 40
 // Score 0: 70
+
+
+map()
+配列に何らかの処理をしてその結果を別の配列として取得したいとき
+(与えられた関数を配列のすべての要素に対して呼び出し、その結果からなる新しい配列を生成)
+
+{
+const prices = [180, 190, 200]; 
+
+// const updatedPrices = prices.map((price) => {
+//   return price + 20;
+// });
+
+const updatedPrices = prices.map(prices => price + 20);
+console.log(updatePrice);
+}
+
+//[200, 210, 220]
