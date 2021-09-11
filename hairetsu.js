@@ -84,3 +84,21 @@ scores.splice(1, 1, 40, 50);
 for (let i = 0; i < scores.length; i++) {
   console.log(`Score $(i): ${scores[i]}`);
 }
+
+
+スプレット構文
+
+{
+const otherScores = [10, 20];
+const scores = [80, 90, 40, 70, ...otherScores];    //←...で上の配列の要素を同じ場所に展開
+// console.log(scores);
+//80, 90, 40, 70, 10, 20
+
+
+function sum(a, b) {
+  console.log(a + b);
+}
+
+sum(...otherScores);
+//sum(10, 20),
+}
