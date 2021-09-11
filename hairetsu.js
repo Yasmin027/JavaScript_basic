@@ -102,3 +102,20 @@ function sum(a, b) {
 sum(...otherScores);
 //sum(10, 20),
 }
+
+
+forEach()
+配列のような「要素に順序を持つオブジェクト」が持つメソッドで、「その要素1つ1つに対して順番にある処理をしたい」時に使う
+
+{
+const scores = [80, 90, 40, 70]; 
+
+scores.forEach((score,index) => {            //←個々のscoreの要素が順番に入ってきて要素がなくなるまで処理をする
+  console.log(`Score $(index): $(score)`);        index(2つ目の引数)を入れると、scoreがscoreの中で何番目かという情報を受け取れる
+});
+}
+
+// Score 0: 80
+// Score 0: 90
+// Score 0: 40
+// Score 0: 70
