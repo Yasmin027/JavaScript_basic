@@ -24,3 +24,25 @@
 
   console.log(scores.length);  //←3（scoresに入っている要素の数)
 }
+
+
+// ループ処理を使って配列すべてに対してない甍の処理を行う方法
+
+'use strict';
+
+{
+  const scores = [80, 90, 40];
+ 
+  // console.log(`Score: ${scores[0]}`);
+  // console.log(`Score: ${scores[1]}`);
+  // console.log(`Score: ${scores[2]}`);
+
+  for (let i =0; i < scores.length; i++) {
+    console.log(`Score: ${scores[i]}`);      //←Score: 80 Score: 90 Score: 40
+  }
+
+  for (let i =0; i < scores.length; i++) {
+    console.log(`Score $(i): ${scores[i]}`);    //←Score 0: 80 Score 1: 90 Score 2: 40
+  }
+}
+
