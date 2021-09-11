@@ -111,7 +111,7 @@ forEach()
 const scores = [80, 90, 40, 70]; 
 
 scores.forEach((score,index) => {            //←個々のscoreの要素が順番に入ってきて要素がなくなるまで処理をする
-  console.log(`Score $(index): $(score)`);        index(2つ目の引数)を入れると、scoreがscoreの中で何番目かという情報を受け取れる
+  console.log(`Score $(index): $(score)`);        //index(2つ目の引数)を入れると、scoreがscoreの中で何番目かという情報を受け取れる
 });
 }
 
