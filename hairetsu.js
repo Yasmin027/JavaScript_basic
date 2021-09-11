@@ -193,3 +193,35 @@ const point = {
 
   y: 180};
 }
+
+アクセスするときの
+記法（2種類）
+
+{
+  const point = {
+    x: 100, 
+    y: 180,
+  };
+    console.log(point.x);     ←記法①
+    console.log(point['y']);  ←記法➁
+}
+
+値の変更
+
+{
+  const point = {
+    x: 100, 
+    y: 180,
+  };
+
+  point.x = 150;
+  // point['x'] = 150;
+
+    console.log(point.x);     
+    console.log(point['y']);  
+
+    //プロパティーの追加
+    point.z = 90;
+    //プロパティーの削除
+    delete point.y;
+}
