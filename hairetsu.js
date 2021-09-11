@@ -66,3 +66,21 @@ scores.shift()           //←削除は一つずつしかできないので、()
 for (let i = 0; i < scores.length; i++) {
   console.log(`Score $(i): ${scores[i]}`);
 }
+
+
+//途中の要素を削除、追加： splice(変化が開始する位置, 削除数, 追加する要素);
+
+const scores = [80, 90, 40, 70];
+
+scores.splice(1 ,2);
+//80, 70
+
+scores.splice(1, 0, 60, 50);
+//80, 60, 50, 90, 40, 70
+
+scores.splice(1, 1, 40, 50);
+//80, 40, 50, 40, 70
+
+for (let i = 0; i < scores.length; i++) {
+  console.log(`Score $(i): ${scores[i]}`);
+}
