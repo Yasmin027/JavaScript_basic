@@ -225,3 +225,32 @@ const point = {
     //プロパティーの削除
     delete point.y;
 }
+
+
+スプレッド構文
+
+{
+  const otherPreps = {
+    r: 4,
+    color: 'red',
+  };
+
+  const point = {
+    x: 100, 
+    y: 180,
+    ...otherPreps,
+  };
+  console.log(point);
+
+
+  分割代入、レスト構文
+  （xとyを定数として扱う)
+
+  const{x, r, ...others} = point;
+
+
+  //100
+  //4
+  //{y: 180, color: "red"}
+}
+
