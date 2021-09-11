@@ -32,3 +32,18 @@
   d.setDate(d.getDate() + 3);    //2019/12/04 10:20:30  (今のdの日付の3日後)
   console.log(d);
 }
+
+
+
+警告を表示
+
+  alert('hello');
+
+確認を表示
+
+  const answer = confirm('削除しますか？');
+  if (answer) {                             //←アンサーをコンソールに返して表示させる
+    console.log('削除しました');
+  } else {
+    console.log('キャンセルしました');
+  }
