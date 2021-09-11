@@ -20,3 +20,25 @@
 
   console.log(Math.randam()); //乱数を生成（0以上1未満のランダムな数値を生成）
 }
+
+
+ランダムな整数を作成
+
+0, ...n
+Math.floor(Math.random() * (n+1))
+
+min, ..., max
+Math.floor(Math.random() * (max + 1 - min)) + min
+
+eg. 0，1，2の整数のうち一つをランダムに出す
+
+Math.random()   ←0以上1未満
+
+Math.random() * 3   ←0以上3未満
+
+Math.floor(amath.random() * 3)   ←0以上3未満の整数
+
+
+サイコロ（1から6までをランダムに出す）
+
+console.log(Math.floor(Math.random() * 6) + 1);  //←６は6+1-1
