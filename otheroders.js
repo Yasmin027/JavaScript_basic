@@ -47,3 +47,22 @@
   } else {
     console.log('キャンセルしました');
   }
+
+
+
+タイマー機能
+// setInterval()という命令で関数とミリ秒単位の数値を渡すと関数をミリ秒感覚で繰り返す
+
+{
+let i = 0;
+
+function showTime() {
+  console.log(new Date());
+  i++;
+  if (i > 2) {
+    clearInterval(intervalId);
+  }
+}
+
+const intervalId = setInterval(showTime, 1000);  //←shouTimeの後に()は付けない
+}
