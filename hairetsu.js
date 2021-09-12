@@ -43,7 +43,7 @@
   }
 
   for (let i =0; i < scores.length; i++) {
-    console.log(`Score $(i): ${scores[i]}`);    //←Score 0: 80 Score 1: 90 Score 2: 40
+    console.log(`Score ${i}: ${scores[i]}`);    //←Score 0: 80 Score 1: 90 Score 2: 40
   }
 }
 
