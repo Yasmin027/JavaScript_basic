@@ -60,9 +60,46 @@ function showTime() {
   console.log(new Date());
   i++;
   if (i > 2) {
-    clearInterval(intervalId);
+    clearInterval(intervalId);  ←タイマーを止めるclearInterval()に返り値でありる定数intervalIdを入れる
   }
 }
 
 const intervalId = setInterval(showTime, 1000);  //←shouTimeの後に()は付けない
+}
+
+
+指定した時間の後に1回だげ処理を実行するように予約する命令
+// setInterval()
+
+{
+  function showTime() {
+    console.log(new Date());
+  }
+
+setTimeout(showTime, 1000);
+}
+
+setTImeOutを使って繰り返し処理をさせる
+
+{
+  function showTime() {
+    console.log(new Date());
+    setTimeout(showTime, 1000);
+  }
+  
+  showTime();
+}
+
+
+//3回で止めるには
+{
+  let i = 0;
+  function showTIme() {
+    console.log(new Date());
+    const timeoutId = setTimeout(showTime, 1000);
+    i++;
+    if(i > 2) {
+      clearTimeout(timeoutId);
+    }
+  }
 }
