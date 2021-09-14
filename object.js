@@ -8,8 +8,8 @@
 
   const point = {
     x: 100, 
-    y: 180};
-}
+    y: 180,
+};
 
 
 const point = {
@@ -19,8 +19,8 @@ const point = {
   x: 100, ←値
 プロパティー（メンバー）
 
-  y: 180};
-}
+  y: 180,
+};
 
 アクセスするときの
 記法（2種類）
@@ -94,7 +94,7 @@ const point = {
 
   const keys = Object.keys(point);   //←Object.keys(point);でpointのすべてのキーを配列で取得できる
   keys. forEach(key => {              //←配列にはforaeachが使える
-    console.log(`Key: $[key] Value: $(point[key])`);
+    console.log(`Key: $[{key} Value: ${point[key]}`);
   });
   //Key: x Value: 100
   //Key: y Value: 180
