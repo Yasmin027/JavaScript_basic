@@ -60,7 +60,7 @@ show() {...},
 }
     ↓ クラスを作る
 
-class Post {                ←classの後は大文字が多い
+class Post {                ←classの後のクラス名は大文字が多い
   constructor() {          ←constructor()で初期化し、インスタンスのプロパティーをセット
     this.text = ???;        ←クラスから作られるインスタンスはthisで表現する
     this.LikeCount = 0;
