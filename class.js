@@ -175,3 +175,46 @@ new Post('Hello')  ←入れたい文字
   Post.showInfo();    ←クラス名.メソッド名;
 }
 //Post class version 1.0
+
+  
+【クラスの継承】
+
+{
+  class Post {  //親クラス
+    constructor(words) {
+      this.text = words;
+      this.likeCount = 0;
+    }
+
+    show() {
+      console.log(`${this.text} - ${this.likeCount} likes`);
+    }
+
+    like() {                
+      this.likeCount++;
+      this.show();
+    }
+  }
+
+  //追加のクラス
+  class SponsoredPost extends Post{   //子クラス ←Postクラスに書かれたコードがそのまま引き継がれる
+    constructor(words, sponsor) {
+      super(text);                  ←子クラスのconstructor()でthisキーワードを使うには最初にsuper()と書く
+      this.sponsor = sponsor;
+    }
+
+    show() {
+      super().show();                   ←親クラスのshow()メソッドを呼び出す
+      console.log(`...sponcsored by ${this.sponsor}`);
+    }
+    }
+
+  const posts = [
+    new Post('JavaScript勉強中'),     
+    new Post('プログラミング楽しい！'),
+    new SponsoredPost('3分動画でマスターしよう', 'dotinstall')
+  ];
+
+  posts[2].show(); 
+  posts[2].like();
+}
