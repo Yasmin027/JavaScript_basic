@@ -138,3 +138,40 @@ new Post('Hello')  ←入れたい文字
 }
 //JavaScript勉強中 - 1 likes
 //プログラミング楽しい！ - 0 likes
+
+  
+  
+【静的メソッド】static
+インスタンスを介さずに直接クラスから呼び出す方法
+：個々のオブジェクトであるインスタンスには関係ないが、投稿に関する機能を作りたいときなど
+
+{
+  class Post {
+    constructor(words) {
+      this.text = words;
+      this.likeCount = 0;
+    }
+
+    show() {
+      console.log(`${this.text} - ${this.likeCount} likes`);
+    }
+
+    like() {                
+      this.likeCount++;
+    }
+
+    //静的メソッド
+    //thisは使えない
+    static showInfo() {
+      console.log('Post class version 1.0');
+    }
+  }
+
+  const posts = [
+    new Post('JavaScript勉強中'),     
+    new Post('プログラミング楽しい！')
+  ];
+
+  Post.showInfo();    ←クラス名.メソッド名;
+}
+//Post class version 1.0
