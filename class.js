@@ -46,7 +46,7 @@
 }
 
 
-クラスの概念
+【クラスの概念】
 
 プロパティーやメソッドの???の箇所に異なる値を渡せば、text以外が同じオブジェクトを作れる
 テンプレート：元になるプロパティーやメソッド
@@ -104,3 +104,37 @@ new Post('Hello')  ←入れたい文字
 }
 //JavaScript勉強中 - 0いいね
 //プログラミング楽しい！ - 0いいね
+
+ 
+  
+  
+【カプセル化】
+プロパティーを直接操作せず、メソッドを介して操作する（機能の拡張が簡単になるため）
+
+{
+  class Post {
+    constructor(words) {
+      this.text = words;
+      this.likeCount = 0;
+    }
+
+    show() {
+      console.log(`${this.text} - ${this.likeCount} likes`);
+    }
+
+    like() {                ←likeメソッドを追加してlikeCountを増やす
+      this.likeCount++;
+    }
+  }
+
+  const posts = [
+    new Post('JavaScript勉強中'),     
+    new Post('プログラミング楽しい！')
+  ];
+
+  posts[0]. like();    ←likeCountを増やす
+  posts[0]. show();
+  posts[1]. show();
+}
+//JavaScript勉強中 - 1 likes
+//プログラミング楽しい！ - 0 likes
